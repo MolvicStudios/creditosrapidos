@@ -5,66 +5,66 @@
 
 /* ── CSS Variables ────────────────────────────────── */
 :root {
-  /* Paleta principal — índigo claro profesional */
+  /* Paleta Fintech — teal sobre oscuro */
   --color-primary:        #2A9D8F;
-  --color-primary-light:  #EFF6FF;
-  --color-primary-mid:    #3B82F6;
-  --color-primary-dark:   #1D4ED8;
+  --color-primary-light:  #0D2A26;
+  --color-primary-mid:    #4ECDC4;
+  --color-primary-dark:   #1A7A6E;
 
-  /* Acento — verde esmeralda */
-  --color-accent:         #10B981;
-  --color-accent-light:   #ECFDF5;
+  /* Acento — dorado */
+  --color-accent:         #E9C46A;
+  --color-accent-light:   #2A2510;
 
   /* Tipos de entidad */
-  --color-directo:        #2563EB;
-  --color-directo-bg:     #EFF6FF;
-  --color-broker:         #7C3AED;
-  --color-broker-bg:      #F5F3FF;
+  --color-directo:        #4ECDC4;
+  --color-directo-bg:     #0D2A26;
+  --color-broker:         #BB86FC;
+  --color-broker-bg:      #1A1230;
 
   /* Badges especiales */
-  --color-free:           #F59E0B;
-  --color-free-bg:        #FFFBEB;
-  --color-asnef:          #10B981;
-  --color-asnef-bg:       #ECFDF5;
-  --color-nomina:         #6366F1;
-  --color-nomina-bg:      #EEF2FF;
-  --color-speed:          #0EA5E9;
-  --color-speed-bg:       #F0F9FF;
+  --color-free:           #E9C46A;
+  --color-free-bg:        #2A2510;
+  --color-asnef:          #66BB6A;
+  --color-asnef-bg:       #0D2A14;
+  --color-nomina:         #7986CB;
+  --color-nomina-bg:      #121428;
+  --color-speed:          #4FC3F7;
+  --color-speed-bg:       #0A1A2A;
 
   /* Textos */
-  --color-text:           #111827;
-  --color-text-muted:     #6B7280;
-  --color-text-light:     #9CA3AF;
+  --color-text:           #E8E8E8;
+  --color-text-muted:     #8E99A4;
+  --color-text-light:     #5F6B7A;
 
   /* Fondos */
-  --color-bg:             #F9FAFB;
-  --color-surface:        #FFFFFF;
-  --color-surface-alt:    #F3F4F6;
+  --color-bg:             #070B14;
+  --color-surface:        #0F1923;
+  --color-surface-alt:    #162333;
 
   /* Bordes */
-  --color-border:         #E5E7EB;
-  --color-border-strong:  #D1D5DB;
+  --color-border:         #1E2D3D;
+  --color-border-strong:  #2A3F52;
 
   /* Sombras */
-  --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
-  --shadow-md:   0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
-  --shadow-lg:   0 10px 30px rgba(0,0,0,.10), 0 4px 8px rgba(0,0,0,.04);
-  --shadow-card: 0 2px 8px rgba(37,99,235,.06), 0 1px 3px rgba(0,0,0,.06);
-  --shadow-card-hover: 0 8px 24px rgba(37,99,235,.12), 0 2px 6px rgba(0,0,0,.06);
+  --shadow-sm:   0 1px 3px rgba(0,0,0,.5);
+  --shadow-md:   0 4px 12px rgba(0,0,0,.6);
+  --shadow-lg:   0 10px 30px rgba(0,0,0,.7);
+  --shadow-card: 0 2px 8px rgba(42,157,143,.06), 0 1px 3px rgba(0,0,0,.4);
+  --shadow-card-hover: 0 8px 24px rgba(42,157,143,.15), 0 2px 6px rgba(0,0,0,.5);
 
   /* Radios */
-  --radius-sm:   6px;
-  --radius-md:   12px;
-  --radius-lg:   16px;
-  --radius-xl:   24px;
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
   --radius-full: 9999px;
 
   /* Tipografía */
-  --font-sans: 'Figtree', system-ui, -apple-system, sans-serif;
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Sora', system-ui, sans-serif;
 
   /* Transiciones */
-  --transition: 0.18s ease;
+  --transition: 0.2s ease;
 
   --nav-h: 58px;
   --max-w: 1060px;
@@ -1218,4 +1218,148 @@ img, svg { display: block; max-width: 100%; }
 
 .pais-card strong {
   color: var(--color-text);
+}
+
+/* ══════════════════════════════════════════════════
+   THEME: FINTECH / DARK APP — creditosrapidos.pro
+   ══════════════════════════════════════════════════ */
+
+/* Glassmorphism header */
+#header {
+  background: rgba(7,11,20,0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(42,157,143,.15);
+}
+@media (max-width: 767px) {
+  .nav-links {
+    background: rgba(7,11,20,0.95);
+    backdrop-filter: blur(20px);
+  }
+}
+
+/* Mesh gradient hero */
+#hero {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(42,157,143,.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(233,196,106,.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(78,205,196,.08) 0%, transparent 50%),
+    linear-gradient(180deg, #0F1923 0%, #070B14 100%);
+  border-bottom: 1px solid rgba(42,157,143,.2);
+}
+
+.hero-label {
+  background: rgba(42,157,143,.12);
+  color: var(--color-primary-mid);
+  border-color: rgba(42,157,143,.25);
+  backdrop-filter: blur(8px);
+}
+
+#hero h1 em { color: var(--color-primary); }
+
+/* Gradient buttons */
+.btn-primary, .btn-search {
+  background: linear-gradient(135deg, #2A9D8F 0%, #4ECDC4 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(42,157,143,.35);
+  border: none;
+}
+.btn-primary:hover, .btn-primary:focus-visible,
+.btn-search:hover {
+  background: linear-gradient(135deg, #1A7A6E 0%, #2A9D8F 100%);
+  box-shadow: 0 6px 25px rgba(42,157,143,.5);
+}
+
+.btn-solicitar {
+  background: linear-gradient(135deg, #2A9D8F 0%, #4ECDC4 100%);
+  box-shadow: 0 4px 12px rgba(42,157,143,.3);
+}
+.btn-solicitar:hover {
+  background: linear-gradient(135deg, #1A7A6E 0%, #2A9D8F 100%);
+  box-shadow: 0 6px 20px rgba(42,157,143,.45);
+}
+
+/* Pill-shaped filters (already full radius) — add glassmorphism */
+.country-tab, .plazo-btn, .tipo-btn, .extra-btn {
+  background: rgba(15,25,35,.6);
+  backdrop-filter: blur(8px);
+  border-color: var(--color-border);
+}
+.country-tab:hover, .plazo-btn:hover:not(:disabled), .tipo-btn:hover:not(:disabled), .extra-btn:hover {
+  background: rgba(42,157,143,.1);
+  border-color: var(--color-primary);
+}
+.country-tab.active, .plazo-btn.active, .tipo-btn.active {
+  background: linear-gradient(135deg, #2A9D8F, #4ECDC4);
+  border-color: transparent;
+  box-shadow: 0 2px 10px rgba(42,157,143,.3);
+}
+
+/* Search box glassmorphism */
+.search-box {
+  background: rgba(15,25,35,.7);
+  backdrop-filter: blur(12px);
+  border-color: rgba(42,157,143,.15);
+}
+
+/* Cards with gradient top border on hover */
+.result-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+.result-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2A9D8F, #4ECDC4, #E9C46A);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.result-card:hover::before {
+  opacity: 1;
+}
+.result-card:hover {
+  border-color: rgba(42,157,143,.3);
+}
+
+/* Step cards */
+.step-number {
+  background: linear-gradient(135deg, #2A9D8F, #4ECDC4);
+  box-shadow: 0 4px 12px rgba(42,157,143,.3);
+}
+
+.step, .edu-card, .faq-item, .pais-card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+.faq-item[open] {
+  border-color: var(--color-primary);
+}
+
+/* Glossary */
+.glossary-search {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+
+/* Footer */
+#footer {
+  background: #050810;
+  border-top: 1px solid rgba(42,157,143,.15);
+}
+
+/* Cookie banner */
+.cookie-banner {
+  background: rgba(7,11,20,0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(42,157,143,.15);
+}
+.btn-cookie-accept {
+  background: linear-gradient(135deg, #2A9D8F, #4ECDC4);
 }
